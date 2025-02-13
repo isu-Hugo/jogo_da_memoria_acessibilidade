@@ -1,0 +1,42 @@
+body{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+img{
+    width: 175px;
+    height: 280px;
+}
+
+.hidden {
+    display: none;
+}
+
+.virada{
+    background-image: url(../images/urso.png);
+}
+
+.cartas{
+    width: 90vw;
+    height: 280px;
+
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.cartas__superior__und{
+    background-color: blue;
+    
+}
+
+.cartas__inferior__und{
+    background-color: brown;
+}
+
