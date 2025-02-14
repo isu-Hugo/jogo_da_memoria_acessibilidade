@@ -1,37 +1,68 @@
-// Exemplo de atribuição de imagem pelo js 
-//
-//document.getElementById(id_c).src = './src/images/urso.png'
-//
+let cartas_viradas = []
+let cartas_encontradas = []
 
-var qnt_c = 0 // quantidade de cartas viradas :D
-//var carta1 = ''
-//var carta2 = ''
+function add(carta){
+    cartas_viradas.push(carta)
+}
+
+function rem(carta){
+    cartas_viradas = cartas_viradas.filter(item => item !== `${carta}`)
+}
 
 function virar(posicao){
-    id_f = `f_${posicao}`
-    id_c = `c_${posicao}`
+    id_f = `f_${posicao}` //id correto do fundo
+    id_c = `c_${posicao}` //id correto da carta
     
-    let fundo = document.getElementById(id_f).classList.value
+    
 
-    if(fundo == ''){
-        document.getElementById(id_c).classList.remove('hidden');
+    if(!cartas_viradas.includes(id_c)){ //quando clicar, se a carta nao estiver virada ###
+
+        if(cartas_encontradas.includes(id_c)){// se ja for um par encontrado nao faz nada
+            return;
+        }
+        
+        if(cartas_viradas.length == 2){ //limita a 2 cartas viradas ----------
+            
+            document.getElementById(`${cartas_viradas[0]}`).classList.add('hidden');
+            document.getElementById(`f_${cartas_viradas[0].charAt(2)}`).classList.remove('hidden');
+            rem(`${cartas_viradas[0]}`)
+
+            document.getElementById(`${cartas_viradas[0]}`).classList.add('hidden');
+            document.getElementById(`f_${cartas_viradas[0].charAt(2)}`).classList.remove('hidden');
+            rem(`${cartas_viradas[0]}`)
+            
+        }//-------------------------------------------------------------------
+
+        //add audio aqui XXXXX
+        document.getElementById(id_c).classList.remove('hidden'); //### vira a carta
         document.getElementById(id_f).classList.add('hidden');
 
-        qnt_c += 1
+        add(id_c)//adiciona a carta virada, na lista de cartas viradas
+
+        
     }else{
-        document.getElementById(id_c).classList.add('hidden');
+        document.getElementById(id_c).classList.add('hidden'); //### desvira a carta
         document.getElementById(id_f).classList.remove('hidden');
 
-        qnt_c -=1
+        rem(id_c)//remove a carta virada, na lista de cartas viradas
+
     }
 
+    if (cartas_viradas.length == 2){ //quando viradas 2 cartas ###
+        if(sorted_cards[cartas_viradas[0].charAt(2)] === sorted_cards[cartas_viradas[1].charAt(2)]){ //### e forem do mesmo tipo ex:('urso', 'belha')
+            cartas_encontradas.push(cartas_viradas[0])  //adiciona em 'cartas encontradas'
+            cartas_encontradas.push(cartas_viradas[1])  //adiciona em 'cartas encontradas'
+            cartas_viradas.length = 0 //limpa a lista de cartas viradas, mas mantem o par encontrado visivel
+
+        }
+    }
+    console.log(cartas_viradas)
+    
+    if(cartas_encontradas.length == 10){//quando todas as cartas forem encontradas o jogo acaba
+        alert('Parabens')
+    }
 
 }
-
-function teste(){
-    console.log(sorted_cards)
-}
-
 
 document.onkeydown = function(e){
     e = e || window.event;
@@ -93,6 +124,43 @@ document.onkeydown = function(e){
             virar('9')
             console.log('ç')
             break;
+
+        case 32:
+            init_game()
+            console.log('Game reiniciado')
+            break;
         
     }
-} // 62 linhas kkkkkk
+} 
+
+function atribuir_cartas(){
+    for (let i = 0; i<10; i++){
+        document.getElementById(`c_${i}`).src = `./src/images/${sorted_cards[i]}.png`
+    }
+}
+
+function init_game(){
+    sort_cards()
+    atribuir_cartas()
+
+    for (let i = 0; i<10; i++){
+        document.getElementById(`c_${i}`).classList.add('hidden');
+        document.getElementById(`f_${i}`).classList.remove('hidden');
+    }
+
+    cartas_viradas.length = 0
+    cartas_encontradas.length = 0
+
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    init_game();
+});
+
+
+function show_cards(){// APENAS PARA DESENVOLVIMENTO
+    for (let i = 0; i<10; i++){
+        document.getElementById(`c_${i}`).classList.remove('hidden');
+        document.getElementById(`f_${i}`).classList.add('hidden');
+    }
+}
