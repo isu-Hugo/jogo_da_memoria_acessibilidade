@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <title>JOGO DA MEMORIA | COM SONS</title>
-</head>
+  </head>
 
-<body>
-    <div class="cartas cartas__superior" >
-    <!--carta 1-->
-        <div class="cartas__superior__und" onclick="virar('0')">
-            <img id="f_0" draggable="false" src="./src/images/fundo.png" alt="">
-            
-            <img draggable="false" 
-            id="c_0"
-            src="" 
-            alt="" 
-            class="hidden">
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="/">Jogo da Memória :D</a>
+        <div class="menu-responsivo">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
+        <ul class="nav-list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/">Sobre</a></li>
+          <li><a href="/">Projetos</a></li>
+          <li><a href="/">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="cartas cartas__superior">
+      <!--carta 1-->
+      <div class="cartas__superior__und" onclick="virar('0')">
+        <img id="f_0" draggable="false" src="./src/images/fundo.png" alt="" />
 
-        <!--carta 2-->
-        <div class="cartas__superior__und" onclick="virar('1')">
-            <img id="f_1" draggable="false" src="./src/images/fundo.png" alt="">
-            <img id="c_1" draggable="false" src="" alt="" class="hidden">
-        </div>
+        <img draggable="false" id="c_0" src="" alt="" class="hidden" />
+      </div>
 
-        <!--carta 3-->
-        <div class="cartas__superior__und" onclick="virar('2')">
-            <img id="f_2" draggable="false" src="./src/images/fundo.png" alt="">
-            <img id="c_2" draggable="false" src="" alt="" class="hidden">
-        </div>
+      <!--carta 2-->
+      <div class="cartas__superior__und" onclick="virar('1')">
+        <img id="f_1" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_1" draggable="false" src="" alt="" class="hidden" />
+      </div>
 
-        <!--carta 4-->
-        <div class="cartas__superior__und" onclick="virar('3')">
-            <img id="f_3" draggable="false" src="./src/images/fundo.png" alt="">
-            <img id="c_3" draggable="false" src="" alt="" class="hidden">
-        </div>
+      <!--carta 3-->
+      <div class="cartas__superior__und" onclick="virar('2')">
+        <img id="f_2" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_2" draggable="false" src="" alt="" class="hidden" />
+      </div>
 
-        <!--carta 5-->
-        <div class="cartas__superior__und" onclick="virar('4')">
-            <img id="f_4" draggable="false" src="./src/images/fundo.png" alt="">
-            <img id="c_4" draggable="false" src="" alt="" class="hidden">
-        </div>
+      <!--carta 4-->
+      <div class="cartas__superior__und" onclick="virar('3')">
+        <img id="f_3" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_3" draggable="false" src="" alt="" class="hidden" />
+      </div>
 
-
+      <!--carta 5-->
+      <div class="cartas__superior__und" onclick="virar('4')">
+        <img id="f_4" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_4" draggable="false" src="" alt="" class="hidden" />
+      </div>
     </div>
     <!-- PARTE INFERIOR -->
     <div class="cartas cartas__inferior">
-        <!--carta 1-->
-            <div class="cartas__inferior__und" onclick="virar('5')">
-                <img id="f_5" draggable="false" src="./src/images/fundo.png" alt="">
-                <img id="c_5" draggable="false" src="" alt="" class="hidden">
-            </div>
-    
-            <!--carta 2-->
-            <div class="cartas__inferior__und" onclick="virar('6')">
-                <img id="f_6" draggable="false" src="./src/images/fundo.png" alt="">
-                <img id="c_6" draggable="false" src="" alt="" class="hidden">
-            </div>
-    
-            <!--carta 3-->
-            <div class="cartas__inferior__und" onclick="virar('7')">
-                <img id="f_7" draggable="false" src="./src/images/fundo.png" alt="">
-                <img id="c_7" draggable="false" src="" alt="" class="hidden">
-            </div>
-    
-            <!--carta 4-->
-            <div class="cartas__inferior__und" onclick="virar('8')">
-                <img id="f_8" draggable="false" src="./src/images/fundo.png" alt="">
-                <img id="c_8" draggable="false" src="" alt="" class="hidden">
-            </div>
-    
-            <!--carta 5-->
-            <div class="cartas__inferior__und" onclick="virar('9')">
-                <img id="f_9" draggable="false" src="./src/images/fundo.png" alt="">
-                <img id="c_9" draggable="false" src="" alt="" class="hidden">
-            </div>
-    
-    
-        </div>
+      <!--carta 1-->
+      <div class="cartas__inferior__und" onclick="virar('5')">
+        <img id="f_5" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_5" draggable="false" src="" alt="" class="hidden" />
+      </div>
 
+      <!--carta 2-->
+      <div class="cartas__inferior__und" onclick="virar('6')">
+        <img id="f_6" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_6" draggable="false" src="" alt="" class="hidden" />
+      </div>
 
+      <!--carta 3-->
+      <div class="cartas__inferior__und" onclick="virar('7')">
+        <img id="f_7" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_7" draggable="false" src="" alt="" class="hidden" />
+      </div>
 
+      <!--carta 4-->
+      <div class="cartas__inferior__und" onclick="virar('8')">
+        <img id="f_8" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_8" draggable="false" src="" alt="" class="hidden" />
+      </div>
+
+      <!--carta 5-->
+      <div class="cartas__inferior__und" onclick="virar('9')">
+        <img id="f_9" draggable="false" src="./src/images/fundo.png" alt="" />
+        <img id="c_9" draggable="false" src="" alt="" class="hidden" />
+      </div>
+    </div>
+    <main></main>
+
+    <script src="./src/js/nav-bar.js"></script>
     <script src="./src/js/lista.js"></script>
     <script src="./src/js/script.js"></script>
     <script src="./src/js/sortear.js"></script>
-</body>
-
+  </body>
 </html>
