@@ -150,3 +150,24 @@ nav {
 .menu-responsivo.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+
+button{
+  border: none;
+  background:none ;
+  color: #fff;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  letter-spacing: 3px;
+  margin-left: 0px;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#voiceList{
+  background: #393947;
+  color: #fff;
+  border: none;
+}

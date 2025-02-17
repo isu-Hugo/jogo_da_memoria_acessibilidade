@@ -34,6 +34,7 @@ function virar(posicao){
         }//-------------------------------------------------------------------
 
         //add audio aqui XXXXX
+        falar(sorted_cards[posicao])
         document.getElementById(id_c).classList.remove('hidden'); //### vira a carta
         document.getElementById(id_f).classList.add('hidden');
 
