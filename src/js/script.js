@@ -48,6 +48,7 @@ function virar(posicao){
 
         
     }else{
+        som_de_virar.play();
         document.getElementById(id_c).classList.add('hidden'); //### desvira a carta
         document.getElementById(id_f).classList.remove('hidden');
 
@@ -63,7 +64,7 @@ function virar(posicao){
 
         }
     }
-    console.log(cartas_viradas)
+    //console.log(cartas_viradas)
     
     if(cartas_encontradas.length == 10){//quando todas as cartas forem encontradas o jogo acaba
         som_de_ganhar.play();
@@ -84,57 +85,57 @@ document.onkeydown = function(e){
     switch (key){
         case 65:
             virar('0')
-            console.log('a');
+            //console.log('a');
             break;
         
         case 83:
             virar('1')
-            console.log('s');
+            //console.log('s');
             break;
 
         case 68:
             virar('2')
-            console.log('d')
+            //console.log('d')
             break;
         
         case 70:
             virar('3')
-            console.log('f')
+            //console.log('f')
             break;
 
         case 71:
             virar('4')
-            console.log('g')
+            //console.log('g')
             break;
 
         case 72:
             virar('5')
-            console.log('h')
+            //console.log('h')
             break;
 
         case 74:
             virar('6')
-            console.log('j')
+            //console.log('j')
             break;
 
         case 75:
             virar('7')
-            console.log('k')
+            //console.log('k')
             break;
         
         case 76:
             virar('8')
-            console.log('l')
+            //console.log('l')
             break;
 
         case 186:
             virar('9')
-            console.log('ç')
+            //console.log('ç')
             break;
 
         case 32:
             init_game()
-            console.log('Game reiniciado')
+            //console.log('Game reiniciado')
             break;
         
     }

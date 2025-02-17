@@ -52,7 +52,7 @@ function sort_cards() {
     }
     duplicar();
     embaralhar();
-    console.log(sorted_cards)
+    //console.log(sorted_cards)
 }
 
 
