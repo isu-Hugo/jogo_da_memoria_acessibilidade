@@ -1,5 +1,9 @@
 let cartas_viradas = []
 let cartas_encontradas = []
+let som_de_virar = new Audio('./src/sound_effects/virar.mp3');
+let som_de_ganhar = new Audio('./src/sound_effects/winning.mp3');
+som_de_ganhar.volume = 0.03;
+
 
 function add(carta){
     cartas_viradas.push(carta)
@@ -8,6 +12,7 @@ function add(carta){
 function rem(carta){
     cartas_viradas = cartas_viradas.filter(item => item !== `${carta}`)
 }
+
 
 function virar(posicao){
     id_f = `f_${posicao}` //id correto do fundo
@@ -34,6 +39,7 @@ function virar(posicao){
         }//-------------------------------------------------------------------
 
         //add audio aqui XXXXX
+        som_de_virar.play()
         falar(sorted_cards[posicao])
         document.getElementById(id_c).classList.remove('hidden'); //### vira a carta
         document.getElementById(id_f).classList.add('hidden');
@@ -60,7 +66,7 @@ function virar(posicao){
     console.log(cartas_viradas)
     
     if(cartas_encontradas.length == 10){//quando todas as cartas forem encontradas o jogo acaba
-        alert('Parabens')
+        som_de_ganhar.play();
     }
 
 }
