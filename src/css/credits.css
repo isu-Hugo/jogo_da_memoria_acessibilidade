@@ -32,7 +32,8 @@ ul {
 
 h1,
 strong,
-p {
+p,
+a {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 4px;
 }
@@ -40,8 +41,8 @@ p {
 h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 4px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .fundo {
@@ -102,4 +103,11 @@ h2 {
 
 .language .linguagem p {
   width: 100%;
+}
+
+.return{
+  background: none;
+  text-decoration: none;
+  color: blanchedalmond;
+  
 }
