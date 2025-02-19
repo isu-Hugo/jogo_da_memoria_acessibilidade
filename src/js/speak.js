@@ -1,11 +1,4 @@
-//mudar pro vetor
-let txtInput = document.querySelector('#txtInput');
-//------
-
 let voiceList = document.querySelector('#voiceList');
-
-//Nao vai ter botao, sera executado pela função 'virar()'
-let btnSpeak = document.querySelector('#btnSpeak');
 
 
 let synth = window.speechSynthesis;
