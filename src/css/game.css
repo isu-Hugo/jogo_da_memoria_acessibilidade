@@ -85,7 +85,6 @@ nav {
 }
 
 .menu-responsivo {
-  cursor: pointer;
   display: none;
 }
 
@@ -160,6 +159,7 @@ button {
   letter-spacing: 3px;
   margin-left: 0px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 button:hover {
