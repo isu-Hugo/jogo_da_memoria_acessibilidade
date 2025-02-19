@@ -59,6 +59,7 @@ function virar(posicao){
 
     if (cartas_viradas.length == 2){ //quando viradas 2 cartas ###
         if(sorted_cards[cartas_viradas[0].charAt(2)] === sorted_cards[cartas_viradas[1].charAt(2)]){ //### e forem do mesmo tipo ex:('urso', 'belha')
+            par_encontrado.play();// som de encontrar um par
             cartas_encontradas.push(cartas_viradas[0])  //adiciona em 'cartas encontradas'
             cartas_encontradas.push(cartas_viradas[1])  //adiciona em 'cartas encontradas'
             cartas_viradas.length = 0 //limpa a lista de cartas viradas, mas mantem o par encontrado visivel
