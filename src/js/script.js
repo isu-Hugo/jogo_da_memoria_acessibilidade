@@ -2,7 +2,8 @@ let cartas_viradas = []
 let cartas_encontradas = []
 let som_de_virar = new Audio('./src/sound_effects/virar.mp3');
 let som_de_ganhar = new Audio('./src/sound_effects/winning.mp3');
-som_de_ganhar.volume = 0.03;
+    som_de_ganhar.volume = 0.03;
+let par_encontrado = new Audio('./src/sound_effects/Ding.mp3');
 
 
 function add(carta){
