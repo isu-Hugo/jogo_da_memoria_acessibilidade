@@ -1,5 +1,5 @@
 body {
-  background-color: #23232e;
+  background-color: #181625;
   background-size: cover;
   height: 92vh;
   display: flex;
@@ -12,7 +12,6 @@ body {
 img {
   width: 175px;
   height: 280px;
-  border-radius: 10px;
 }
 
 .hidden {
@@ -33,8 +32,12 @@ img {
   justify-content: space-between;
 }
 
-select {
-  font-size: 20px;
+.cartas__superior__und {
+  background-color: blue;
+}
+
+.cartas__inferior__und {
+  background-color: brown;
 }
 
 * {
@@ -43,33 +46,22 @@ select {
 }
 
 a {
-  display: inline-block;
-  border: none;
-  background: none;
   color: #fff;
   text-decoration: none;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  letter-spacing: 3px;
-  font-size: 23px;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 a:hover {
   opacity: 0.7;
-  color: gold;
-  transform: scale(1.2);
 }
 
 .logo {
+  font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 23px;
 }
 
 nav {
   position: fixed;
-  border-bottom: 2px solid #000;
   top: 0;
   left: 0;
   width: 100%;
@@ -77,7 +69,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background-color: #17171b;
+  background: #23232e;
   height: 8vh;
   z-index: 1000;
 }
@@ -85,7 +77,6 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
-  font-size: 30px;
 }
 
 .nav-list li {
@@ -160,22 +151,19 @@ nav {
 }
 
 button {
-  display: inline-block;
   border: none;
   background: none;
   color: #fff;
   text-decoration: none;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   letter-spacing: 3px;
-  font-size: 23px;
+  margin-left: 0px;
+  font-size: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 button:hover {
   opacity: 0.7;
-  color: gold;
-  transform: scale(1.2);
 }
 
 #voiceList {

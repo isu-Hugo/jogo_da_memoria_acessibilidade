@@ -1,1 +1,1 @@
-const cartas = ["urso", "abelha", "aranha", "ouriço", "esquilo", "elefante", "iguana", "ovelha", "urubu"];
+const cartas = ["urso", "abelha", "aranha", "esquilo", "elefante", "iguana", "ovelha", "urubu"];
